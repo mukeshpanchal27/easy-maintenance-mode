@@ -38,6 +38,20 @@ if ( ! function_exists( 'wpkoder_force_under_construction' ) ) {
                 $get_page = get_page_uri( get_theme_mod( 'enable_under_maintenance_pages' ) );
                 $wpkoder_do_redirect = '/'.$get_page;
 
+            } else {
+                //echo get_theme_mod('enable_under_maintenance_pages');die;
+                $wpkoder_getpost = get_page_uri( get_theme_mod( 'enable_under_maintenance_pages' ) );
+                if ($wpkoder_getpost) {
+                    $wpkoder_do_redirect = '/?page_id='.get_theme_mod( 'enable_under_maintenance_pages' );
+                }
+            }
+            
+            /* Added Contact Form 7 Compatibility */
+            if( strpos( $wpkoder_userrequest, '/contact-form-7/v1' ) !== false ) {
+                return;
+            }
+            if( !preg_match( "/login|admin|dashboard|account/i", $wpkoder_userrequest ) > 0 ) {
+                
                 // Make sure it gets all the proper decoding and rtrim action
                 $wpkoder_userrequest = str_replace( '*', '(.\*)', $wpkoder_userrequest );
                 $wpkoder_pattern = '/^' . str_replace( '/', '\/', rtrim( $wpkoder_userrequest, '/' ) ) . '/';
@@ -49,13 +63,9 @@ if ( ! function_exists( 'wpkoder_force_under_construction' ) ) {
                 }
 
             } else {
-                //echo get_theme_mod('enable_under_maintenance_pages');die;
-                $wpkoder_getpost = get_page_uri( get_theme_mod( 'enable_under_maintenance_pages' ) );
-                if ($wpkoder_getpost) {
-                    $wpkoder_do_redirect = '/?page_id='.get_theme_mod( 'enable_under_maintenance_pages' );
-                }
+                // simple comparison redirect
+                $do_redirect = $wpkoder_userrequest;
             }
-            
             
             if( $wpkoder_do_redirect !== '' && trim( $wpkoder_do_redirect, '/' ) !== trim( $wpkoder_userrequest, '/' ) ) {
                 // check if destination needs the domain prepended

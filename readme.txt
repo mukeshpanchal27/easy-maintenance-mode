@@ -1,8 +1,8 @@
-=== Easy Maintenance Mode By Wpkoder ===
-Contributors: mukesh27	
+=== Easy Maintenance Mode ===
+Contributors: mukesh27, vaishalipanchal
 Tags: maintenance, admin, administration, construction, under construction, maintenance mode, launch, wordpress maintenance mode, site maintenance, wpkoder
-Requires at least: 4.5
-Tested up to: 4.8
+Requires at least: 5.0
+Tested up to: 5.7
 Stable tag: 1.0 
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -19,7 +19,7 @@ Easy Maintenance Mode is customizer base plugin in which user just need to assig
 = Using The WordPress Dashboard =
 
 1. Navigate to the 'Add New' in the plugins dashboard
-2. Search for 'Easy Maintenance Mode By Wpkoder'
+2. Search for 'Easy Maintenance Mode'
 3. Click 'Install Now'
 4. Activate the plugin on the Plugin dashboard
 
@@ -42,9 +42,21 @@ Easy Maintenance Mode is customizer base plugin in which user just need to assig
 
 = How do I report a bug? =
 
-Please [let me know](mailto:mukesh.wpkoder@gmail.com) what's going on, with as much detail as you have.
+Please [let me know](mailto:mukeshpanchal27@gmail.com) what's going on, with as much detail as you have.
 
 == Changelog ==
 
 = 1.0 =
 Initial release
+
+= 1.1 =
+Check compatibility for WPS Hide Login plugin
+
+= 1.2 =
+Check compatibility for WordPress 5.6
+Check compatibility for Contact Form 7
+Changed under construction logic
+
+= 1.3 =
+Added admin page for better navigation.
+Update POT file.
