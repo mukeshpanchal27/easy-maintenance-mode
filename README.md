@@ -1,2 +1,2 @@
 # easy-maintenance-mode
-Easy Maintenance Mode WordPress Plugin
+WordPress Easy Maintenance Mode Plugin
