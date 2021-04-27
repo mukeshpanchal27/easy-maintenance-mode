@@ -1,8 +1,8 @@
-=== Easy Maintenance Mode ===
+8=== Easy Maintenance Mode ===
 Contributors: mukesh27, vaishalipanchal
 Tags: maintenance, admin, administration, construction, under construction, maintenance mode, launch, wordpress maintenance mode, site maintenance, wpkoder
 Requires at least: 5.0
-Tested up to: 5.7
+Tested up to: 5.8
 Stable tag: 1.0 
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
