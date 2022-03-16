@@ -83,7 +83,7 @@ if ( ! function_exists( 'wpkoder_force_under_construction' ) ) {
 }
 
 
- /* To Add Under Construction Notice To Adminbar For All Logged User */
+ /* To Add Under Construction Notice To Admin bar For All Logged User */
 if ( ! function_exists( 'wpkoder_admin_bar_under_construction_notice' ) ) {
     function wpkoder_admin_bar_under_construction_notice() {
         global $wp_admin_bar;
